@@ -42,7 +42,7 @@ namespace MovieAPI.Controllers
             catch (Exception e)
             {
                 _res.IsSuccess = false;
-                _res.Message = e.Message;
+                _res.Message = $"Get All Movies Failed. Error: {e.Message}. Stack Trace: {e.StackTrace}";
             }
 
             return _res;
@@ -71,7 +71,7 @@ namespace MovieAPI.Controllers
             catch (Exception e)
             {
                 _res.IsSuccess = false;
-                _res.Message = e.Message;
+                _res.Message = $"Select Movie Failed. Error: {e.Message}. Stack Trace: {e.StackTrace}";
             }
 
             return _res;
@@ -98,7 +98,7 @@ namespace MovieAPI.Controllers
             catch (Exception e)
             {
                 _res.IsSuccess = false;
-                _res.Message = "Insert Movie Failed, "+e.Message;
+                _res.Message = $"Insert Movie Failed. Error: {e.Message}. Stack Trace: {e.StackTrace}";
             }
 
             return _res;
@@ -134,7 +134,7 @@ namespace MovieAPI.Controllers
             catch (Exception e)
             {
                 _res.IsSuccess = false;
-                _res.Message = e.Message;
+                _res.Message = $"Update Movie Failed. Error: {e.Message}. Stack Trace: {e.StackTrace}";
             }
             return _res;
         }
@@ -162,7 +162,7 @@ namespace MovieAPI.Controllers
             catch (Exception e)
             {
                 _res.IsSuccess = false;
-                _res.Message = e.Message;
+                _res.Message = $"Delete Movie Failed. Error: {e.Message}. Stack Trace: {e.StackTrace}";
             }
             return _res;
         }
